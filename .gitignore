@@ -1,7 +1,43 @@
+# Virtual environment
 .venv/
+venv/
+ENV/
+
+# Python cache & compiled bytecode
 __pycache__/
+*.py[cod]
+*$py.class
 .ipynb_checkpoints/
+
+# Processed & temporary datasets (keep raw data source tracked or managed)
+data/processed/*
+!data/processed/train.parquet
+!data/processed/test.parquet
+data/interim/
+
+# Model artifacts & experiment logs
 *.pkl
 *.joblib
+models/*.pkl
+models/*.joblib
+!models/pipeline.joblib
 mlruns/
-data/processed/
+mlflow.db
+*.db
+monitoring/*.db
+data/*.db
+
+# Testing & code coverage caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs, environment variables & secrets
+*.log
+.env
+.env.*
+!.env.example
+
+# IDE configurations
+.vscode/
+.idea/

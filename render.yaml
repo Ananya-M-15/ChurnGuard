@@ -1,0 +1,34 @@
+services:
+  # 1. ChurnGuard FastAPI Backend
+  - type: web
+    name: churnguard-api
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: PYTHONPATH
+        value: .
+
+  # 2. ChurnGuard Streamlit Dashboard
+  - type: web
+    name: churnguard-dashboard
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run dashboard/app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: PYTHONPATH
+        value: .
+      - key: CHURNGUARD_API_URL
+        fromService:
+          type: web
+          name: churnguard-api
+          property: host

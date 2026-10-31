@@ -1,0 +1,4 @@
+model_name,cv_pr_auc_mean,cv_pr_auc_std,cv_roc_auc_mean,cv_roc_auc_std,cv_f1_mean,cv_f1_std,cv_recall_mean,cv_recall_std,cv_precision_mean,cv_accuracy_mean,training_time_seconds,mlflow_cv_run_id
+Logistic_Regression,0.62,0.0187,0.8359,0.0135,0.618,0.0234,0.7351,0.03,0.5333,0.7588,3.66,476914d509d84169a6ac25f624b7bb8c
+Random_Forest,0.6533,0.0151,0.8454,0.0116,0.6346,0.0106,0.8254,0.0246,0.5158,0.7476,4.04,87de77b157ae41db9699a33631430058
+XGBoost,0.6813,0.0221,0.862,0.0112,0.6475,0.0245,0.7732,0.0362,0.557,0.7767,3.83,a25b559cda194b0294fc25f1aacf8695

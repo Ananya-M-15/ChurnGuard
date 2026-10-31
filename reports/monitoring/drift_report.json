@@ -1,0 +1,190 @@
+{
+  "generated_at": "2026-10-31T10:44:35.665442+00:00",
+  "status": "Drift detected",
+  "message": "Drift detected. 17 feature(s) exceeded drift thresholds across 128 inference samples evaluated against baseline.",
+  "reference_dataset": "train.parquet",
+  "reference_sample_count": 5634,
+  "inference_sample_count": 128,
+  "min_samples_required": 50,
+  "drift_detected_count": 17,
+  "drifted_features": [
+    "Tenure Months",
+    "Monthly Charges",
+    "Total Charges",
+    "CLTV",
+    "Latitude",
+    "Longitude",
+    "Zip Code",
+    "City",
+    "Lat Long",
+    "Phone Service",
+    "Multiple Lines",
+    "Internet Service",
+    "Online Security",
+    "Online Backup",
+    "Contract",
+    "Paperless Billing",
+    "Payment Method"
+  ],
+  "numerical_metrics": {
+    "Tenure Months": {
+      "statistic": 0.2718,
+      "p_value": 0.0,
+      "drift_detected": true,
+      "threshold": 0.05,
+      "interpretation": "Drift detected (p < alpha)"
+    },
+    "Monthly Charges": {
+      "statistic": 0.208,
+      "p_value": 0.0,
+      "drift_detected": true,
+      "threshold": 0.05,
+      "interpretation": "Drift detected (p < alpha)"
+    },
+    "Total Charges": {
+      "statistic": 0.2548,
+      "p_value": 0.0,
+      "drift_detected": true,
+      "threshold": 0.05,
+      "interpretation": "Drift detected (p < alpha)"
+    },
+    "CLTV": {
+      "statistic": 0.4141,
+      "p_value": 0.0,
+      "drift_detected": true,
+      "threshold": 0.05,
+      "interpretation": "Drift detected (p < alpha)"
+    },
+    "Latitude": {
+      "statistic": 0.2463,
+      "p_value": 0.0,
+      "drift_detected": true,
+      "threshold": 0.05,
+      "interpretation": "Drift detected (p < alpha)"
+    },
+    "Longitude": {
+      "statistic": 0.3242,
+      "p_value": 0.0,
+      "drift_detected": true,
+      "threshold": 0.05,
+      "interpretation": "Drift detected (p < alpha)"
+    },
+    "Zip Code": {
+      "statistic": 0.373,
+      "p_value": 0.0,
+      "drift_detected": true,
+      "threshold": 0.05,
+      "interpretation": "Drift detected (p < alpha)"
+    }
+  },
+  "categorical_metrics": {
+    "City": {
+      "psi_value": 10.5271,
+      "drift_detected": true,
+      "threshold": 0.2,
+      "interpretation": "Significant shift / Drift detected (PSI >= 0.2)"
+    },
+    "Lat Long": {
+      "psi_value": 12.1456,
+      "drift_detected": true,
+      "threshold": 0.2,
+      "interpretation": "Significant shift / Drift detected (PSI >= 0.2)"
+    },
+    "Gender": {
+      "psi_value": 0.061,
+      "drift_detected": false,
+      "threshold": 0.2,
+      "interpretation": "Stable (PSI < 0.10)"
+    },
+    "Senior Citizen": {
+      "psi_value": 0.0119,
+      "drift_detected": false,
+      "threshold": 0.2,
+      "interpretation": "Stable (PSI < 0.10)"
+    },
+    "Partner": {
+      "psi_value": 0.1248,
+      "drift_detected": false,
+      "threshold": 0.2,
+      "interpretation": "Moderate shift (0.10 <= PSI < 0.20)"
+    },
+    "Dependents": {
+      "psi_value": 0.0787,
+      "drift_detected": false,
+      "threshold": 0.2,
+      "interpretation": "Stable (PSI < 0.10)"
+    },
+    "Phone Service": {
+      "psi_value": 1.1764,
+      "drift_detected": true,
+      "threshold": 0.2,
+      "interpretation": "Significant shift / Drift detected (PSI >= 0.2)"
+    },
+    "Multiple Lines": {
+      "psi_value": 1.2123,
+      "drift_detected": true,
+      "threshold": 0.2,
+      "interpretation": "Significant shift / Drift detected (PSI >= 0.2)"
+    },
+    "Internet Service": {
+      "psi_value": 0.201,
+      "drift_detected": true,
+      "threshold": 0.2,
+      "interpretation": "Significant shift / Drift detected (PSI >= 0.2)"
+    },
+    "Online Security": {
+      "psi_value": 0.3181,
+      "drift_detected": true,
+      "threshold": 0.2,
+      "interpretation": "Significant shift / Drift detected (PSI >= 0.2)"
+    },
+    "Online Backup": {
+      "psi_value": 0.4814,
+      "drift_detected": true,
+      "threshold": 0.2,
+      "interpretation": "Significant shift / Drift detected (PSI >= 0.2)"
+    },
+    "Device Protection": {
+      "psi_value": 0.1462,
+      "drift_detected": false,
+      "threshold": 0.2,
+      "interpretation": "Moderate shift (0.10 <= PSI < 0.20)"
+    },
+    "Tech Support": {
+      "psi_value": 0.0879,
+      "drift_detected": false,
+      "threshold": 0.2,
+      "interpretation": "Stable (PSI < 0.10)"
+    },
+    "Streaming TV": {
+      "psi_value": 0.0745,
+      "drift_detected": false,
+      "threshold": 0.2,
+      "interpretation": "Stable (PSI < 0.10)"
+    },
+    "Streaming Movies": {
+      "psi_value": 0.1273,
+      "drift_detected": false,
+      "threshold": 0.2,
+      "interpretation": "Moderate shift (0.10 <= PSI < 0.20)"
+    },
+    "Contract": {
+      "psi_value": 0.206,
+      "drift_detected": true,
+      "threshold": 0.2,
+      "interpretation": "Significant shift / Drift detected (PSI >= 0.2)"
+    },
+    "Paperless Billing": {
+      "psi_value": 0.4475,
+      "drift_detected": true,
+      "threshold": 0.2,
+      "interpretation": "Significant shift / Drift detected (PSI >= 0.2)"
+    },
+    "Payment Method": {
+      "psi_value": 0.6382,
+      "drift_detected": true,
+      "threshold": 0.2,
+      "interpretation": "Significant shift / Drift detected (PSI >= 0.2)"
+    }
+  }
+}
